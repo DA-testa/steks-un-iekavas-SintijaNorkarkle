@@ -32,19 +32,28 @@ def find_mismatch(text):
 def main():
     # I un F ievade jāpievieno main
     while True:
-    text = input() #lietotājs ievada virkni, kas tiek saglabāts mainīgajā "text"
-    if "I" in text: # tiek pārbaudīts, vai virknē tika ievadīts burts "I"
-        text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
-        mismatch = find_mismatch(text)
-        print(mismatch) #izvada mainīgā "mismatch" vērtību
-        break
-    else "F" in text:
-        text = input("Ievadiet faila nosaukumu: ")
-        try:
-            with open(filename, 'r') as file:
-                text = file.read()
+        text = input() #lietotājs ievada virkni, kas tiek saglabāts mainīgajā "text"
+        if "I" in text: # tiek pārbaudīts, vai virknē tika ievadīts burts "I"
+            text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
             mismatch = find_mismatch(text)
-            print(mismatch)
+            print(mismatch) #izvada mainīgā "mismatch" vērtību
+            
+        elif "F" in text:
+            name = input("Ievadiet faila nosaukumu: ")
+            try:
+                with open(name, 'r') as file:
+                    text = file.read()
+                mismatch = find_mismatch(text)
+                print(mismatch)
+                
+            except FileNotFoundError:
+                print("Fails netika atrasts.")
+        else:
+            text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
+            mismatch = find_mismatch(text)
+            print(mismatch) #izvada mainīgā "mismatch" vērtību
+            
+        
 
 if __name__ == "__main__":
     main()
