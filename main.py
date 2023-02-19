@@ -38,20 +38,20 @@ def main():
             mismatch = find_mismatch(text)
             print(mismatch) #izvada mainīgā "mismatch" vērtību
             
-        elif "F" in text:
-            fname = input("Ievadiet faila nosaukumu: ")
-            try:
-                with open(fname, 'r') as file:
-                    dati = file.read()
-                mismatch = find_mismatch(dati)
-                print(mismatch) 
-            except FileNotFoundError:
-                print("Fails netika atrasts.")
-        else:
-            # text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
-            mismatch = find_mismatch(text)
-            print(mismatch) #izvada mainīgā "mismatch" vērtību
-            
+            elif "F" in text:
+                fname = input("Ievadiet faila nosaukumu: ")
+                try:
+                    with open(fname, 'r') as file:
+                        dati = file.read()
+                    mismatch = find_mismatch(dati)
+                    print(mismatch) 
+                except FileNotFoundError:
+                    print("Fails netika atrasts.")
+            else:
+                text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
+                mismatch = find_mismatch(text)
+                print(mismatch) #izvada mainīgā "mismatch" vērtību
+                
         
 
 if __name__ == "__main__":
