@@ -21,9 +21,9 @@ def find_mismatch(text):
                 # pārbauda, vai steks ir tukšs, vai arī aizverošā iekava nesakrīt ar pēdējo atverošo iekavu stekā
                 return i+1 # atgriež pašreizējo indeksu "i" +1, tādā veidā norādot pirmās nesakrītošās iekavas pozīciju
             opening_brackets_stack.pop() # tiek noņemta pēdējā atverošā iekava no steka, jo tā sakrīt ar pašreizējo aizverošo iekavu
-    if opening_brackets_stack: # pārbauda, vai steks nav tukšs
-                 return opening_brackets_stack[0][1] #atgriež pirmās nesakrītošās atverošās iekavas pozīciju stekā
-return "Success" # izvada "Success", ja visas iekavas ir vienāda skaita ( katrai atverošajai iekavai ir attiecīgā aizverošā iekava)
+        if opening_brackets_stack: # pārbauda, vai steks nav tukšs
+            return opening_brackets_stack[0][1] #atgriež pirmās nesakrītošās atverošās iekavas pozīciju stekā
+    return "Success" # izvada "Success", ja visas iekavas ir vienāda skaita ( katrai atverošajai iekavai ir attiecīgā aizverošā iekava)
             
                 
 def main():
