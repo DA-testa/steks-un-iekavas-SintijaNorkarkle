@@ -39,7 +39,7 @@ def main():
         print(mismatch) #izvada mainīgā "mismatch" vērtību
         break
     else "F" in text:
-        filename = input("Ievadiet faila nosaukumu: ")
+        text = input("Ievadiet faila nosaukumu: ")
         try:
             with open(filename, 'r') as file:
                 text = file.read()
