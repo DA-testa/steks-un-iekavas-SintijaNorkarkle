@@ -44,8 +44,7 @@ def main():
                 with open(name, 'r') as file:
                     text = file.read()
                 mismatch = find_mismatch(text)
-                print(mismatch)
-                
+                print(mismatch) 
             except FileNotFoundError:
                 print("Fails netika atrasts.")
         else:
