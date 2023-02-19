@@ -39,11 +39,11 @@ def main():
             print(mismatch) #izvada mainīgā "mismatch" vērtību
             
         elif "F" in text:
-            name = input("Ievadiet faila nosaukumu: ")
+            fname = input("Ievadiet faila nosaukumu: ")
             try:
-                with open(name, 'r') as file:
-                    text = file.read()
-                mismatch = find_mismatch(text)
+                with open(fname, 'r') as file:
+                    dati = file.read()
+                mismatch = find_mismatch(dati)
                 print(mismatch) 
             except FileNotFoundError:
                 print("Fails netika atrasts.")
