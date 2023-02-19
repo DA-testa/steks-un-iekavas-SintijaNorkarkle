@@ -23,7 +23,7 @@ def find_mismatch(text):
             opening_brackets_stack.pop() # tiek noņemta pēdējā atverošā iekava no steka, jo tā sakrīt ar pašreizējo aizverošo iekavu
             if opening_brackets_stack: # pārbauda, vai steks nav tukšs
                  return opening_brackets_stack[0][1] #atgriež pirmās nesakrītošās atverošās iekavas pozīciju stekā
-            elif return "Success" # izvada "Success", ja visas iekavas ir vienāda skaita ( katrai atverošajai iekavai ir attiecīgā aizverošā iekava)
+        elif return "Success" # izvada "Success", ja visas iekavas ir vienāda skaita ( katrai atverošajai iekavai ir attiecīgā aizverošā iekava)
             
                 
 def main():
