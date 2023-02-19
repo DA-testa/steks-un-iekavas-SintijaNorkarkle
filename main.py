@@ -31,28 +31,27 @@ def find_mismatch(text):
                 
 def main():
     # I un F ievade jāpievieno main
-    while True:
+#    while True:
         text = input() #lietotājs ievada virkni, kas tiek saglabāts mainīgajā "text"
         if "I" in text: # tiek pārbaudīts, vai virknē tika ievadīts burts "I"
             text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
             mismatch = find_mismatch(text)
             print(mismatch) #izvada mainīgā "mismatch" vērtību
             
-            elif "F" in text:
-                fname = input("Ievadiet faila nosaukumu: ")
-                try:
-                    with open(fname, 'r') as file:
-                        dati = file.read()
-                    mismatch = find_mismatch(dati)
-                    print(mismatch) 
-                except FileNotFoundError:
-                    print("Fails netika atrasts.")
-            else:
-                text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
-                mismatch = find_mismatch(text)
-                print(mismatch) #izvada mainīgā "mismatch" vērtību
-                
+#       elif "F" in text: # tiek pārbaudīts, vai virknē tika ievadīts burts "F"
+#           fname = input("Ievadiet faila nosaukumu: ") # tālāk lietotājs ievada faila nosaukumu, kas tiek saglabāts mainīgajā "fname"
+#           try:
+#              with open(fname, 'r') as file: # tiek atvērts fails
+#                  dati = file.read() # tiek nolasīti dati no faila
+#              mismatch = find_mismatch(dati)
+#              print(mismatch) # tiek izvadīts rezultāts
+#           except FileNotFoundError: # ja fails neeksistē
+#              print("Fails netika atrasts.")
+#       else:
+#              text = input() # tālāk lietotājs atkal ievada citu virkni, kas tiek saglabāts mainīgajā "text"
+#              mismatch = find_mismatch(text)
+#              print(mismatch) #izvada mainīgā "mismatch" vērtību
+            
         
-
 if __name__ == "__main__":
     main()
